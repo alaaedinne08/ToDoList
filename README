@@ -1,0 +1,114 @@
+# ✅ ToDoList App
+
+A full-featured task management web application built with **ASP.NET MVC** and **Entity Framework**. Users can register, log in, and manage their own personal tasks through a clean and responsive interface. Authentication is handled via **ASP.NET Identity**, ensuring each user only sees and manages their own data.
+
+---
+
+## 🚀 Features
+
+- User registration and login with **ASP.NET Identity**
+- Each user has their own private task list — no data leakage between accounts
+- Create, read, update and delete tasks (full CRUD)
+- Mark tasks as complete / incomplete
+- Responsive UI built with Bootstrap and custom CSS
+- Data persistence with SQL Server via Entity Framework
+- Clean MVC architecture with separation of concerns
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | ASP.NET MVC (.NET Framework) |
+| Language | C# |
+| Authentication | ASP.NET Identity |
+| ORM | Entity Framework (Code First) |
+| Database | SQL Server |
+| Frontend | HTML5, CSS3, Bootstrap, JavaScript |
+
+---
+
+## 📁 Project Structure
+
+```
+CodeAlpha_ToDoList/
+├── Controllers/        # MVC Controllers (Tasks, Account)
+├── Models/             # Entity models, Identity user, data annotations
+├── Views/              # Razor views for UI (Tasks, Account, Shared)
+├── Migrations/         # Entity Framework database migrations
+├── Content/            # CSS stylesheets
+├── Custom_Scripts/     # Custom JavaScript files
+└── App_Start/          # Application configuration (routes, bundles, Identity)
+```
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Visual Studio 2019 or later
+- .NET Framework 4.7+
+- SQL Server (LocalDB or full instance)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/alaaedinne08/CodeAlpha_ToDoList.git
+   cd CodeAlpha_ToDoList
+   ```
+
+2. **Configure the connection string**
+   Open `Web.config` and update the connection string to point to your SQL Server instance:
+   ```xml
+   <connectionStrings>
+     <add name="DefaultConnection"
+          connectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ToDoListDb;Integrated Security=True"
+          providerName="System.Data.SqlClient" />
+   </connectionStrings>
+   ```
+
+3. **Apply migrations**
+   Open the Package Manager Console in Visual Studio and run:
+   ```
+   Update-Database
+   ```
+
+4. **Run the application**
+   Press `F5` in Visual Studio or use:
+   ```bash
+   dotnet run
+   ```
+
+5. **Register an account** and start managing your tasks.
+
+---
+
+## 🔐 Authentication Flow
+
+- Built on top of **ASP.NET Identity** for secure user management
+- Users register with email and password
+- Passwords are hashed automatically by Identity
+- Each task is linked to the authenticated user — users cannot access each other's data
+- Protected routes redirect unauthenticated users to the login page via `[Authorize]` attribute
+
+---
+
+
+## 🧠 What I Learned
+
+- Integrating **ASP.NET Identity** for full authentication and user management
+- Linking user-specific data using foreign keys with Entity Framework
+- Implementing the full MVC pattern in ASP.NET
+- Using Entity Framework Code First with migrations
+- Designing a clean, responsive UI with Bootstrap
+- Managing the complete development cycle from data modelling to deployment
+
+---
+
+## 👤 Author
+
+**Alaa Eddine Karka**  
+[GitHub](https://github.com/alaaedinne08) · [LinkedIn](https://www.linkedin.com/in/alaa-eddine-karka) · Vercelli, Italy
